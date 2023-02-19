@@ -1,4 +1,4 @@
-<?php require("validateLogin.php") ?>
+<?php require("validateRegister.php") ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,8 +29,8 @@
   <input type='text' name='Password' value=""/><br>
 
   <label>Type:</label><br>
-  <input type='radio' name='type' value="Job-seeker"/>Job-seeker
-  <input type='radio' name='type' value="Employer"/>Employer<br>
+  <input type='radio' name='Type' value="Job-seeker"/>Job-seeker
+  <input type='radio' name='Type' value="Employer"/>Employer<br>
 
   <label>Email:</label><br>
   <input type='text' name='Email' value=""/><br>
