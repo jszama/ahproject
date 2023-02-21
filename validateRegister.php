@@ -24,7 +24,9 @@ if(isset($_POST['register'])){
   if (isset($_POST['Number'])){
     $_number = $_POST['Number'];
   }
-  $_organisation = $_POST['Organisation'];
+  if (isset($_POST['Organisation'])){
+    $_organisation = $_POST['Organisation'];
+  }
 
   $query = "SELECT username FROM Account WHERE username='$_username';";
   $result = $conn->query($query);
