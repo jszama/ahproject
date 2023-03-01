@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 // Input validation variables
 $error = null; 
 $success = null;
@@ -26,7 +28,7 @@ if(isset($_POST['login'])){
       if ($result->num_rows == 1) {
           $success = 'Correct login! Redirecting';
           header('Location:main.php');
-          $_sessionUsername = $_username;
+          $_SESSION['Username'] = $_username;
       } else {
           $error = 'Incorrect login details.';
     }
