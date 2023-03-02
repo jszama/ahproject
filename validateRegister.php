@@ -32,7 +32,7 @@ if(isset($_POST['register'])){
   $result = $conn->query($query);
 
   if(empty(trim($_username)) or (5 >= strlen($_username) and strlen($_username) <= 20) or  $result->num_rows != 0){
-    $error = "Invalid username, length(5-20).";
+    $error = "Invalid username";
   } elseif (empty(trim($_password)) or (6 >= strlen($_password) and strlen($_password) <= 20)){
     $error = "Invalid password, length (5-20).";
   } elseif (empty($_type)) {

@@ -1,0 +1,25 @@
+function openCreate() {
+    document.getElementById("myForm").style.display = "block";
+    document.getElementById("createButton").style.display = "none";
+}
+
+function closeCreate() {  
+    document.getElementById("myForm").style.display = "none";
+    document.getElementById("createButton").style.display = "block";
+}
+
+function allowSearch() {
+    var checkbox1 = document.getElementById("checkbox1").checked;
+    var checkbox2 = document.getElementById("checkbox2").checked;
+    var checkbox3 = document.getElementById("checkbox3").checked;
+
+    if (checkbox1 == true || checkbox2 == true || checkbox3 == true) {
+    document.getElementById("searchButton").disabled = false;
+    } else {
+    document.getElementById("searchButton").disabled = true;
+    }
+}
+
+function showError(text) {
+    alert(text);
+}

@@ -1,3 +1,9 @@
+body {
+    background-color: #004C6D;
+    margin: 0;
+    padding: 0;
+}
+
 .header {
     background-color: #004C6D;
     border-bottom: 3px solid #000;
@@ -67,6 +73,80 @@ li a:hover {
     justify-content: space-around;
     padding: 5px;
     border-bottom: 3px solid white;
+    background-color: #015274;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.predisplay {
+    background-color: #015274;
+    margin: 50px;
+    border-radius: 25px;
+}
+
+.display {
+    display: flex;
+    flex-direction: row;
+    border: 3px solid #000;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #006a97;
+    margin:25px;
+}
+
+
+.post {
+    padding: 10px;
+    margin: 15px;
+    border: 3px solid #000;
+    border-radius: 25px;
+}
+
+.display.update {
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    margin:0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.predisplay.update {
+    margin:0px;
+}
+
+
+.main.update {
+    padding-top: 1%;
+    padding-right: 40%;
+    padding-bottom: 1%;
+    padding-left: 40%;
+    background-color: #00628c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.userinfo {
+    margin-top: 3%;
+    float:left;
+    justify-content: left;
+}
+
+.updatewindow {
+    margin: 5%;
+    background-color: #00758c;
+    padding: 5%;
+}
+
+.updatewindow input{
+    margin-top: 5%;
+    text-align:center
+}
+
+.updatetitle{
+    display: block;
+    text-align: center;
 }
 
 .errors {

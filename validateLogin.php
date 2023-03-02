@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 // Input validation variables
 $error = null; 
 $success = null;
