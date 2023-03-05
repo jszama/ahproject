@@ -33,16 +33,16 @@ if(isset($_POST['register'])){
 
   if(empty(trim($_username)) or (5 >= strlen($_username) and strlen($_username) <= 20) or  $result->num_rows != 0){
     $error = "Invalid username";
-  } elseif (empty(trim($_password)) or (6 >= strlen($_password) and strlen($_password) <= 20)){
-    $error = "Invalid password, length (5-20).";
+  } elseif (empty(trim($_password)) or (6 < strlen($_password) and strlen($_password) > 20)){
+    $error = "Invalid password";
   } elseif (empty($_type)) {
     $error = "Empty type.";
-  } elseif (($_type == "Job-seeker") and (str_contains($_email, '@') == False or str_contains($_email, '.') == False)){
+  } elseif (($_type == "Job-seeker") and (str_contains($_email, '@') == False or str_contains($_email, '.') == False or empty($_email))){
     $error = "Invalid Email.";
-  } elseif (($_type == "Job-seeker") and (strlen($_number) != 11 or is_numeric($_number) == False)) {
+  } elseif (($_type == "Job-seeker") and (strlen($_number) != 11 or is_numeric($_number) == False or empty($_number))) {
     $error = "Invalid number.";
   } elseif (($_type == "Employer") and (empty(trim($_organisation)))){
-    $error = "Invalid organisation.";
+    $error = "Empty organisation.";
   } else {
     $query1 = "INSERT INTO Account (username, password, type, email, number) VALUES ('$_username', '$_password', '$_type', '$_email', '$_number');";
     $query2 = "INSERT INTO Account (username, password, type, organisation) VALUES ('$_username', '$_password', '$_type', '$_organisation');";

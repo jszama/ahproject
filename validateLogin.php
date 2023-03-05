@@ -26,13 +26,13 @@ if(isset($_POST['login'])){
 
       if ($result->num_rows == 1) {
           $success = 'Correct login! Redirecting';
-          header('Location:main.php');
           $_SESSION['Username'] = $_username;
+          $_SESSION['scheme'] = "light";
+          header('Location:main.php');
       } else {
           $error = 'Incorrect login details.';
     }
     }
   }
-
 $conn->close();
 ?>
